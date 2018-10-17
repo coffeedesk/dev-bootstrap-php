@@ -1,0 +1,21 @@
+version: "3.5"
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    ports:
+    - "8087:80"
+    links:
+    - php-fpm
+    env_file:
+    - .env
+    volumes:
+    - ./docker/nginx/site.tmpl:/etc/nginx/conf.d/site.tmpl
+
+  php-fpm:
+    build:
+      context: .
+      dockerfile: docker/php-fpm/Dockerfile
+    volumes:
+    - .:/var/opt/application
