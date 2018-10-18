@@ -1,0 +1,10 @@
+{
+    "name": "coffeedesk/backend-skeleton",
+    "authors": [
+        {
+            "name": "Coffeedesk",
+            "email": "dev@coffeedesk.pl"
+        }
+    ],
+    "require": {}
+}
