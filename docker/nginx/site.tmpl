@@ -4,7 +4,7 @@ server {
   location / {
     rewrite  ^/(.*)/$1 break;
     include fastcgi_params;
-    fastcgi_pass php:9000;
+    fastcgi_pass php-fpm:9000;
     fastcgi_param SCRIPT_FILENAME ${NGINX_DOCUMENT_ROOT}/index.php;
     fastcgi_param SCRIPT_NAME index.php;
     fastcgi_param DOCUMENT_ROOT ${NGINX_DOCUMENT_ROOT};
