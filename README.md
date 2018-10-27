@@ -1,38 +1,20 @@
-# SKELETON-PHP READY FOR CI(DOCKER+TRAVIS)
+# Bootstrap for php-based projects 
 
-This is the skeleton of the project which may be used with docker, travis and kubernetes.
+This is the bootstrap for php project which may be used with docker. It has nginx frontend configured too.
 
-### About containers:
+## Available containers
 
-**php-fpm:** Use php7 with fpm and has also installed amqp, pdo etc.
+- `app` Based on https://github.com/coffeedesk/devops-docker-images/blob/master/php7/Dockerfile
+- `nginx` Based on nginx:latest
 
-**nginx:** Use latest version of nginx
-
-### Before start
-
-1. Remember to copy .env.dist file to .env file
-    ```
-    cp .env.dist .env
-    ```
- 
-2. Edit var NGINX_HOST - default settings:
-
-    ```
-    NGINX_HOST=backend_template.local
-    ```
-
-3. Add host to your /etc/hosts
-    ```
-    sudo bash -c "echo 127.0.0.1 backend_template.local >> /etc/hosts"
-    ```
-    
 ## Local development
  
-1. Run docker-compose 
-    ```
-    docker-compose up
-    ```
+Run via docker-compose 
+```
+docker-compose up
+```
 
-2. Run in your browser
-
-<http://backend_template.local:8087/index.php>
+Access with http:
+```
+curl localhost:<dynamically-assigned-port>
+```
