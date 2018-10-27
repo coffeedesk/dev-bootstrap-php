@@ -1,10 +1,4 @@
 {
-    "name": "coffeedesk/backend-skeleton",
-    "authors": [
-        {
-            "name": "Coffeedesk",
-            "email": "dev@coffeedesk.pl"
-        }
-    ],
+    "name": "coffeedesk/bootstrap-php",
     "require": {}
 }

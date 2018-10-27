@@ -1,3 +1,3 @@
 <?php
 
-echo "It's working";
+echo "php-fpm works fine";
